@@ -1,5 +1,15 @@
 create database mybatis;
 use mybatis;
 CREATE TABLE users(id INT PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(20), age INT);
-INSERT INTO users(NAME, age) VALUES('π¬∞¡≤‘¿«', 27);
-INSERT INTO users(NAME, age) VALUES('∞◊ª¢…Òª ', 27);
+INSERT INTO users(NAME, age) VALUES('Â≠§ÂÇ≤ËãçÁãº', 27);
+INSERT INTO users(NAME, age) VALUES('ÁôΩËôéÁ•ûÁöá', 27);
+
+
+CREATE TABLE orders(
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_no VARCHAR(20),
+    order_price FLOAT
+);
+INSERT INTO orders(order_no, order_price) VALUES('aaaa', 23);
+INSERT INTO orders(order_no, order_price) VALUES('bbbb', 33);
+INSERT INTO orders(order_no, order_price) VALUES('cccc', 22);
