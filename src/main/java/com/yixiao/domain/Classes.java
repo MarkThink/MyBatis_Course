@@ -1,5 +1,7 @@
 package com.yixiao.domain;
 
+import java.util.List;
+
 public class Classes {
 
     //定义实体类的属性 与class表中的字段对应
@@ -11,6 +13,9 @@ public class Classes {
     用于维护teacher和class之间的一对一关系，通过这个teacher属性就可以知道这个班级是由哪个老师负责的
      */
     private Teacher teacher;
+
+    //使用一个List<Student>集合属性表示班级拥有的学生
+    private List<Student> students;
 
     public int getId() {
         return id;
@@ -34,6 +39,14 @@ public class Classes {
 
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
     }
 
     @Override
