@@ -10,7 +10,7 @@ import java.io.InputStream;
 public class MyBatisUtil {
 
     /*
-    »ñÈ¡SqlSessionFactory
+    è·å–SqlSessionFactory
      */
     public static SqlSessionFactory getSqlSessionFactory() {
         String resource = "mybatis.xml";
@@ -20,17 +20,17 @@ public class MyBatisUtil {
     }
 
     /*
-    »ñÈ¡SqlSession
+    è·å–SqlSession
      */
     public static SqlSession getSqlSession() {
         return getSqlSessionFactory().openSession();
     }
 
     /*
-    »ñÈ¡SqlSession
+    è·å–SqlSession
     @param isAutoCommit
-        true ±íÊ¾´´½¨µÄSqlSession¶ÔÏóÔÚÖ´ĞĞÍêSQLÖ®ºó»á×Ô¶¯Ìá½»ÊÂÎñ
-        false ±íÊ¾´´½¨µÄSqlSession¶ÔÏóÔÚÖ´ĞĞÍêSQLÖ®ºó²»»á×Ô¶¯Ìá½»ÊÂÎñ£¬ĞèÒªÊÖ¶¯µ÷ÓÃsqlSession.commit()Ìá½»ÊÂÎñ
+        true è¡¨ç¤ºåˆ›å»ºçš„SqlSessionå¯¹è±¡åœ¨æ‰§è¡Œå®ŒSQLä¹‹åä¼šè‡ªåŠ¨æäº¤äº‹åŠ¡
+        false è¡¨ç¤ºåˆ›å»ºçš„SqlSessionå¯¹è±¡åœ¨æ‰§è¡Œå®ŒSQLä¹‹åä¸ä¼šè‡ªåŠ¨æäº¤äº‹åŠ¡ï¼Œéœ€è¦æ‰‹åŠ¨è°ƒç”¨sqlSession.commit()æäº¤äº‹åŠ¡
      */
     public static SqlSession getSqlSession(boolean isAutoCommit){
         return getSqlSessionFactory().openSession(isAutoCommit);

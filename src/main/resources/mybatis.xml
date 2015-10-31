@@ -3,19 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-    <settings>
-        <!-- Globally enables or disables any caches configured in any mapper under this configuration -->
-        <setting name="cacheEnabled" value="true"/>
-        <!-- Sets the number of seconds the driver will wait for a response from the database -->
-        <setting name="defaultStatementTimeout" value="3000"/>
-        <!-- Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn -->
-        <setting name="mapUnderscoreToCamelCase" value="true"/>
-        <!-- Allows JDBC support for generated keys. A compatible driver is required.
-        This setting forces generated keys to be used if set to true,
-         as some drivers deny compatibility but still work -->
-        <setting name="useGeneratedKeys" value="true"/>
-    </settings>
+    <!-- 配置实体类的别名，配置实体类别名的目的是为了在引用实体类时可以使用实体类的别名来代替实体类，达到简写的目的 -->
+    <typeAliases>
+        <!-- 为实体类me.gacl.domain.User配置一个别名_User -->
+        <!-- <typeAlias type="me.gacl.domain.User" alias="_User"/> -->
+        <!-- 为me.gacl.domain包下的所有实体类配置别名，MyBatis默认的设置别名的方式就是去除类所在的包后的简单的类名
+        比如me.gacl.domain.User这个实体类的别名就会被设置成User
+         -->
+        <package name="com.yixiao.domain"/>
+    </typeAliases>
 
     <!-- Continue going here -->
     <environments default="development">
