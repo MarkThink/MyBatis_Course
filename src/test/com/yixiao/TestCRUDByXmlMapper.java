@@ -35,7 +35,7 @@ public class TestCRUDByXmlMapper {
          */
         String statement = "com.yixiao.mapper.UserMapper.updateUser";
         User user = new User();
-        user.setId(14);
+        user.setId(2);
         user.setName("用户王王");
         user.setAge(25);
         //执行修改操作
