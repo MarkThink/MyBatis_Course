@@ -30,6 +30,7 @@
 
     <mappers>
         <!--<mapper resource="mapper/UserMapper.xml"/>-->
-        <mapper resource="mapper/OrderMapper.xml"/>
+        <!--<mapper resource="mapper/OrderMapper.xml"/>-->
+        <mapper resource="mapper/ClassMapper.xml"/>
     </mappers>
 </configuration>
